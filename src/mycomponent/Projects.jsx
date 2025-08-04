@@ -67,8 +67,8 @@ export default function Projects() {
       title: 'Customer Analysis Report',
       tech: 'Tableau, E-commerce Dataset',
       type: 'Tableaudata',
-      image: 'https://png.pngtree.com/png-vector/20220913/ourmid/pngtree-work-in-progress-png-image_6173846.png',
-      github: '#',
+      image: './project5.png',
+      github: 'https://github.com/venkteshwari/Customer-Analysis-Report',
       live: '#',
     },
     {
