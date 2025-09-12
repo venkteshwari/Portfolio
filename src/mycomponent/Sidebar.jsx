@@ -50,8 +50,8 @@ export default function SideNavbar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex fixed top-0 left-0 h-full min-w-[4rem] max-w-[4rem] bg-purple-600 flex-col items-center py-6 shadow-xl z-50 overflow-x-hidden">
-        <div className="text-white text-xl font-semibold mb-10 bg-purple-700 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+      <div className="hidden md:flex fixed top-0 left-0 h-full min-w-[4rem] max-w-[4rem] bg-[#19183B] flex-col items-center py-6 shadow-xl z-50 overflow-x-hidden">
+        <div className="text-white text-xl font-semibold mb-10 bg-[#3A3A70] rounded-full w-10 h-10 flex items-center justify-center shadow-md">
           Va
         </div>
 
@@ -61,7 +61,7 @@ export default function SideNavbar() {
               key={index}
               href={item.href}
               className={`text-white p-2 rounded transition-all duration-200 ${
-                currentSectionIndex === index ? 'bg-purple-500' : 'hover:bg-purple-500'
+                currentSectionIndex === index ? 'bg-[#3A3A70]' : 'hover:bg-[#5C5C9E]'
               }`}
               title={item.label}
             >
@@ -80,7 +80,7 @@ export default function SideNavbar() {
       </div>
 
       {/* Mobile Top Bar */}
-      <div className="md:hidden fixed top-0 left-0 w-full bg-purple-600 z-50 shadow flex items-center justify-between px-4 h-14 overflow-x-hidden">
+      <div className="md:hidden fixed top-0 left-0 w-full bg-[#19183B] z-50 shadow flex items-center justify-between px-4 h-14 overflow-x-hidden">
         <div className="text-white font-bold text-lg">Va</div>
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -93,14 +93,14 @@ export default function SideNavbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden fixed top-14 left-0 w-full bg-purple-700 z-40 flex flex-wrap items-center justify-center gap-4 py-4 px-3 overflow-x-hidden">
+        <div className="md:hidden fixed top-14 left-0 w-full bg-[#19183B] z-40 flex flex-wrap items-center justify-center gap-4 py-4 px-3 overflow-x-hidden">
           {menu.map((item, index) => (
             <a
               key={index}
               href={item.href}
               onClick={() => setMobileOpen(false)}
               className={`text-white p-2 rounded transition-all duration-200 ${
-                currentSectionIndex === index ? 'bg-purple-500' : 'hover:bg-purple-500'
+                currentSectionIndex === index ? 'bg-[#3A3A70]' : 'hover:bg-[#5C5C9E]'
               }`}
               title={item.label}
             >

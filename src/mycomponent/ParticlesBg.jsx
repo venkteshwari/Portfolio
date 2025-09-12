@@ -22,10 +22,10 @@ export default function ParticlesBg() {
             value: 60,
             density: { enable: true, area: 800 },
           },
-          color: { value: "#a855f7" },
+          color: { value: "#19183B" },
           links: {
             enable: true,
-            color: "#a855f7",
+            color: "#19183B",
             distance: 130,
             opacity: 0.4,
             width: 1,

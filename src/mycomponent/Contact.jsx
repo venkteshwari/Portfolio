@@ -12,7 +12,7 @@ export default function Contact() {
     <>
       <section
         id="contact"
-        className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 md:px-8"
+        className="py-16 bg-gray-50 px-4 sm:px-6 md:px-8"
       >
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
@@ -21,15 +21,15 @@ export default function Contact() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.4 }}
-              className="bg-purple-100 p-3 rounded-full text-purple-600 shadow"
+              className="bg-[#19183B]/10 p-3 rounded-full text-[#FEA405] shadow"
             >
-              <Mail size={28} />
+              <Mail size={28} color="#FEA405" />
             </motion.div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#19183B]">
               Contact Me
             </h2>
           </div>
-          <div className="w-15 h-1 bg-purple-500 rounded mb-10" />
+          <div className="w-15 h-1 bg-[#19183B] rounded mb-10" />
 
           {/* Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -56,14 +56,13 @@ export default function Contact() {
                 {
                   icon: Youtube,
                   title: 'YouTube',
-                  value: 'https://www.youtube.com/@ProjectCodeLab-o1y',
+                  value: 'ProjectCodeLab',
                   link: 'https://www.youtube.com/@ProjectCodeLab-o1y',
                 },
                 {
                   icon: Instagram,
                   title: 'Instagram',
-                  value:
-                    'https://www.instagram.com/projectcodelab?igsh=MXV5NzViY2VvcjI0eA%3D%3D',
+                  value:'@projectCodeLab',
                   link:
                     'https://www.instagram.com/projectcodelab?igsh=MXV5NzViY2VvcjI0eA%3D%3D',
                 },
@@ -83,12 +82,12 @@ export default function Contact() {
                       repeatType: 'loop',
                       ease: 'easeInOut',
                     }}
-                    className="mt-1 text-purple-600"
+                    className="mt-1 text-[#FEA405]"
                   >
-                    <item.icon size={24} />
+                    <item.icon size={24} color="#FEA405" />
                   </motion.div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-800">
+                    <h4 className="text-lg font-semibold text-[#19183B]">
                       {item.title}
                     </h4>
                     {item.link ? (
@@ -96,7 +95,7 @@ export default function Contact() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-purple-600 text-sm hover:underline break-all"
+                        className="text-[#19183B] text-sm hover:underline break-all"
                       >
                         {item.value}
                       </a>
@@ -110,17 +109,17 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Map */}
-            <div className="flex items-center justify-center">
+            {/* Map Full Cover Right Section */}
+            <div className="w-full h-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8753478060985!2d72.84588889999999!3d19.417791100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a929bfbb80e5%3A0x46f9804cc0f5758b!2sGaonraipada%20Rd%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1754080646604!5m2!1sen!2sin"
                 width="100%"
-                height="300"
+                height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="rounded shadow-md w-full md:w-[90%]"
+                className="rounded shadow-md w-full h-[400px] md:h-full"
               ></iframe>
             </div>
           </div>
@@ -128,7 +127,7 @@ export default function Contact() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-purple-600 text-white text-center py-4">
+      <footer className="bg-[#19183B] text-white text-center py-4">
         <p>
           &copy; {new Date().getFullYear()} Venkteshwari Ambalakaran. All
           rights reserved.
