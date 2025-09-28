@@ -56,7 +56,7 @@ export default function Home() {
             </a>
             <div className="flex gap-3">
               <a
-                href="https://www.linkedin.com/in/venkteshwari-ambalakaran-072498356/"
+                href="https://www.linkedin.com/in/venkteshwariambalakaran/"
                 target="_blank"
                 className="p-2 bg-white rounded-md shadow   hover:bg-[#5C5C9E] transition"
               >

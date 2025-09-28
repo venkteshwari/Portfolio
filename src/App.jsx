@@ -7,6 +7,7 @@ import Education from './mycomponent/Education';
 import Skills from './mycomponent/Skills';
 import Contact from './mycomponent/Contact';
 import ParticlesBg from './mycomponent/ParticlesBg';
+import CertificationSection from './mycomponent/CertificationSection';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <About />
         <Projects />
         <Education />
+        <CertificationSection/>
         <Skills />
         <Contact />
       </div>

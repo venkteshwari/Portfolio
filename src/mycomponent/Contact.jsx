@@ -8,12 +8,42 @@ import {
 import { motion } from 'framer-motion';
 
 export default function Contact() {
+  const contactItems = [
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'venkteshvariambalakaran@gmail.com',
+      link: 'mailto:venkteshvariambalakaran@gmail.com',
+    },
+    {
+      icon: Phone,
+      title: 'Phone',
+      value: '+91 9529089892',
+      link: 'tel:+919529089892',
+    },
+    {
+      icon: MapPin,
+      title: 'Location',
+      value: 'Maharashtra, India',
+    },
+    {
+      icon: Youtube,
+      title: 'YouTube',
+      value: 'ProjectCodeLab',
+      link: 'https://www.youtube.com/@ProjectCodeLab-o1y',
+    },
+    {
+      icon: Instagram,
+      title: 'Instagram',
+      value: '@projectCodeLab',
+      link:
+        'https://www.instagram.com/projectcodelab?igsh=MXV5NzViY2VvcjI0eA%3D%3D',
+    },
+  ];
+
   return (
     <>
-      <section
-        id="contact"
-        className="py-16 bg-gray-50 px-4 sm:px-6 md:px-8"
-      >
+      <section id="contact" className="py-16 bg-gray-50 px-4 sm:px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <div className="flex items-center gap-3 mb-4">
@@ -31,97 +61,47 @@ export default function Contact() {
           </div>
           <div className="w-15 h-1 bg-[#19183B] rounded mb-10" />
 
-          {/* Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Contact Info */}
-            <div className="flex flex-wrap gap-x-10 gap-y-6">
-              {[
-                {
-                  icon: Mail,
-                  title: 'Email',
-                  value: 'venkteshvariambalakaran@gmail.com',
-                  link: 'mailto:venkteshvariambalakaran@gmail.com',
-                },
-                {
-                  icon: Phone,
-                  title: 'Phone',
-                  value: '+91 9529089892',
-                  link: 'tel:+919529089892',
-                },
-                {
-                  icon: MapPin,
-                  title: 'Location',
-                  value: 'Maharashtra, India',
-                },
-                {
-                  icon: Youtube,
-                  title: 'YouTube',
-                  value: 'ProjectCodeLab',
-                  link: 'https://www.youtube.com/@ProjectCodeLab-o1y',
-                },
-                {
-                  icon: Instagram,
-                  title: 'Instagram',
-                  value:'@projectCodeLab',
-                  link:
-                    'https://www.instagram.com/projectcodelab?igsh=MXV5NzViY2VvcjI0eA%3D%3D',
-                },
-              ].map((item, index) => (
+          {/* Contact Info Inline */}
+          <div className="flex flex-wrap justify-center md:justify-between gap-6">
+            {contactItems.map((item, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start md:items-center gap-3 min-w-[200px] flex-1"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
                 <motion.div
-                  key={index}
-                  className="flex items-start gap-3 min-w-[200px]"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                    ease: 'easeInOut',
+                  }}
+                  className="mt-1 text-[#FEA405]"
                 >
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: 'loop',
-                      ease: 'easeInOut',
-                    }}
-                    className="mt-1 text-[#FEA405]"
-                  >
-                    <item.icon size={24} color="#FEA405" />
-                  </motion.div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-[#19183B]">
-                      {item.title}
-                    </h4>
-                    {item.link ? (
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#19183B] text-sm hover:underline break-all"
-                      >
-                        {item.value}
-                      </a>
-                    ) : (
-                      <p className="text-gray-600 text-sm break-all">
-                        {item.value}
-                      </p>
-                    )}
-                  </div>
+                  <item.icon size={24} color="#FEA405" />
                 </motion.div>
-              ))}
-            </div>
-
-            {/* Map Full Cover Right Section */}
-            <div className="w-full h-full">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8753478060985!2d72.84588889999999!3d19.417791100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a929bfbb80e5%3A0x46f9804cc0f5758b!2sGaonraipada%20Rd%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1754080646604!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded shadow-md w-full h-[400px] md:h-full"
-              ></iframe>
-            </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-[#19183B]">
+                    {item.title}
+                  </h4>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#19183B] text-sm hover:underline break-all"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="text-gray-600 text-sm break-all">{item.value}</p>
+                  )}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
